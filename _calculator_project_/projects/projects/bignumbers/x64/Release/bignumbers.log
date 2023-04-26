@@ -1,0 +1,10 @@
+﻿  bignum.cc
+  function.cpp
+d:\documents\technologies\!!!!!!!!!!!!!!!!!!!!!!\calculator\calculator\project\_calculator_project_\projects\code\bignumbers\function.h(8): warning C4273: '_strupr': inconsistent dll linkage
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(469): note: see previous definition of '_strupr'
+  main_bn.cpp
+d:\documents\technologies\!!!!!!!!!!!!!!!!!!!!!!\calculator\calculator\project\_calculator_project_\projects\code\bignumbers\function.h(8): warning C4273: '_strupr': inconsistent dll linkage
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(469): note: see previous definition of '_strupr'
+  Generating Code...
+     Creating library D:\documents\TECHNOLOGIES\!!!!!!!!!!!!!!!!!!!!!!\Calculator\Calculator\project\_calculator_project_\calculator\calculator_\x64\Release\bignumbers.lib and object D:\documents\TECHNOLOGIES\!!!!!!!!!!!!!!!!!!!!!!\Calculator\Calculator\project\_calculator_project_\calculator\calculator_\x64\Release\bignumbers.exp
+  bignumbers.vcxproj -> D:\documents\TECHNOLOGIES\!!!!!!!!!!!!!!!!!!!!!!\Calculator\Calculator\project\_calculator_project_\calculator\calculator_\x64\Release\bignumbers.exe
