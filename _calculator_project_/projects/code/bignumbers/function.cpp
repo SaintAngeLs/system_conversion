@@ -4,69 +4,72 @@
 
 char tolower(char ch)
 {
-if(ch>=97)
-    return ch;
-return ch + 32;
+    if(ch>=97)
+        return ch;
+    return ch + 32;
 }
 char toupper(char ch)
 {
-if(ch<97)
-    return ch;
-return ch - 32;
+    if(ch<97)
+        return ch;
+    return ch - 32;
 }
 char* _strupr(char* str)
 {
-int size = strlen(str);
+    int size = strlen(str);
 
-for(int i = 0;i < size; i++)
-    str[i] = toupper(str[i]);
+    for(int i = 0;i < size; i++)
+        str[i] = toupper(str[i]);
     return str;
 }
 char digitToHex(int N);
 void convertToOther( bignum temp,char* result, int scale)
 {
-    //std::cout<<"convertToOther\n";
-bignum sc(scale);
-bignum rest;
-int count=0;
-while(temp!=0)
-{
-rest = temp%sc;
-result[count]= digitToHex( std::stoi(rest.to_string()));
+        //std::cout<<"convertToOther\n";
+    bignum sc(scale);
+    bignum rest;
+    int count=0;
+    while(temp!=0)
+    {
+        rest = temp%sc;
+        result[count]= digitToHex( std::stoi(rest.to_string()));
 
-count++;
-//temp = temp-rest;
-temp /= sc;
-}
-result[count]='\0';
+        count++;
+        //temp = temp-rest;
+        temp /= sc;
+    }
+    result[count]='\0';
 
-int size = strlen(result);
-//std::cout<<result;
-int size1 = size/2;
-for(int i=0;i<size1;i++)
-{
-    char tmpc = result[i];
-    result[i]=result[size-1-i];
-    result[size-i-1]=tmpc;
-}
+    int size = strlen(result);
+    //std::cout<<result;
+    int size1 = size/2;
+    for(int i=0;i<size1;i++)
+    {
+        char tmpc = result[i];
+        result[i]=result[size-1-i];
+        result[size-i-1]=tmpc;
+    }
 
 }
 void _itoa(const bignum& temp, char* result, int scale)
 {
     char res [10000];
-strcpy(res,temp.to_string(scale).c_str());
-if((scale == 16)||(scale == 2))
-strcpy(result, res+2);
-else
-    if(scale==10)
-    strcpy(result, res);
-    else {
-       convertToOther(temp, res,  scale);
-       strcpy(result,res);
+    strcpy(res,temp.to_string(scale).c_str());
+    if((scale == 16)||(scale == 2))
+    strcpy(result, res+2);
+    else
+    {
+        if(scale==10)
+        strcpy(result, res);
+        else {
+           convertToOther(temp, res,  scale);
+           strcpy(result,res);
+        }
     }
 
 
 }
+
 char digitToHex(int N)
 {
     switch (N)
@@ -120,7 +123,7 @@ int hexToDigit(char ch)
 bignum  convertToDecimalFrom2To10(const bignum& a, int sys)
 {
    bignum  num = a;
-  bignum val = 0;
+   bignum val = 0;
 
    bignum base = 1;
 
